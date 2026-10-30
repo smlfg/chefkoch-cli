@@ -1,0 +1,456 @@
+{
+  "count": 2164,
+  "queryId": "",
+  "results": [
+    {
+      "score": 2164,
+      "recipe": {
+        "id": "745721177147257",
+        "title": "Lasagne",
+        "subtitle": "Lasagne wie beim Italiener: würzige Bolognese, cremige Béchamel und eine goldbraune Käsekruste. Schon der Duft aus dem Ofen macht Vorfreude aufs gemeinsame Essen – und auf den ersten Bissen, bei dem alle zufrieden lächeln.",
+        "createdAt": "2007-04-21T17:55:01+02:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 5033,
+          "rating": 4.7
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/745721177147257/Lasagne.html",
+        "slug": "Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2163,
+      "recipe": {
+        "id": "1112181217260303",
+        "title": "Lasagne Bolognese",
+        "subtitle": "",
+        "createdAt": "2018-12-11T11:22:27+01:00",
+        "difficulty": 2,
+        "preparationTime": 60,
+        "rating": {
+          "numVotes": 763,
+          "rating": 4.62
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1112181217260303/Lasagne-Bolognese.html",
+        "slug": "Lasagne-Bolognese",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2162,
+      "recipe": {
+        "id": "555661153310338",
+        "title": "Béchamel-Hackfleisch-Lasagne",
+        "subtitle": "",
+        "createdAt": "2006-07-21T16:10:57+02:00",
+        "difficulty": 2,
+        "preparationTime": 25,
+        "rating": {
+          "numVotes": 1277,
+          "rating": 4.61
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/555661153310338/Bechamel-Hackfleisch-Lasagne.html",
+        "slug": "Bechamel-Hackfleisch-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2161,
+      "recipe": {
+        "id": "491931143472316",
+        "title": "Italienische Lasagne",
+        "subtitle": "",
+        "createdAt": "2006-03-29T09:58:42+02:00",
+        "difficulty": 2,
+        "preparationTime": 60,
+        "rating": {
+          "numVotes": 387,
+          "rating": 4.63
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/491931143472316/Italienische-Lasagne.html",
+        "slug": "Italienische-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2160,
+      "recipe": {
+        "id": "2114131340630587",
+        "title": "Vegetarische Spinat-Gemüse-Lasagne mit Tomatensoße",
+        "subtitle": "Überbackene Spinat-Gemüse-Lasagne mit würziger Tomatensauce",
+        "createdAt": "2012-06-26T17:48:41+02:00",
+        "difficulty": 2,
+        "preparationTime": 25,
+        "rating": {
+          "numVotes": 2149,
+          "rating": 4.85
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2114131340630587/Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse.html",
+        "slug": "Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2159,
+      "recipe": {
+        "id": "484751142525322",
+        "title": "Idiotensichere Lasagne",
+        "subtitle": "ohne Béchamelsauce",
+        "createdAt": "2006-03-16T17:21:20+01:00",
+        "difficulty": 2,
+        "preparationTime": 20,
+        "rating": {
+          "numVotes": 851,
+          "rating": 4.54
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/484751142525322/Idiotensichere-Lasagne.html",
+        "slug": "Idiotensichere-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2158,
+      "recipe": {
+        "id": "2268731362381035",
+        "title": "Lasagne al forno",
+        "subtitle": "Der Klassiker mit Hackfleischsoße",
+        "createdAt": "2013-03-04T17:42:27+01:00",
+        "difficulty": 2,
+        "preparationTime": 40,
+        "rating": {
+          "numVotes": 363,
+          "rating": 4.64
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2268731362381035/Lasagne-al-forno.html",
+        "slug": "Lasagne-al-forno",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2157,
+      "recipe": {
+        "id": "1747871284049932",
+        "title": "Einfache, schnelle Lasagne",
+        "subtitle": "Das Rezept werdet Ihr lieben!",
+        "createdAt": "2010-09-10T17:21:57+02:00",
+        "difficulty": 2,
+        "preparationTime": 20,
+        "rating": {
+          "numVotes": 110,
+          "rating": 4.54
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1747871284049932/Einfache-schnelle-Lasagne.html",
+        "slug": "Einfache-schnelle-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2156,
+      "recipe": {
+        "id": "348581119961196",
+        "title": "Lachs-Lasagne mit Spinat",
+        "subtitle": "",
+        "createdAt": "2005-06-28T15:30:22+02:00",
+        "difficulty": 2,
+        "preparationTime": 15,
+        "rating": {
+          "numVotes": 1266,
+          "rating": 4.56
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/348581119961196/Lachs-Lasagne-mit-Spinat.html",
+        "slug": "Lachs-Lasagne-mit-Spinat",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2155,
+      "recipe": {
+        "id": "1143511220703880",
+        "title": "Julies feine Gemüselasagne",
+        "subtitle": "Vegetarische Lasagne mit Gemüse und fruchtiger und cremiger Tomatensauce ",
+        "createdAt": "2008-09-06T17:54:16+02:00",
+        "difficulty": 2,
+        "preparationTime": 35,
+        "rating": {
+          "numVotes": 1437,
+          "rating": 4.74
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1143511220703880/Julies-feine-Gemueselasagne.html",
+        "slug": "Julies-feine-Gemueselasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2154,
+      "recipe": {
+        "id": "1616691268862802",
+        "title": "Zucchini-Lasagne",
+        "subtitle": "Low carb Rezept - ohne Teig",
+        "createdAt": "2010-03-20T17:33:47+01:00",
+        "difficulty": 2,
+        "preparationTime": 40,
+        "rating": {
+          "numVotes": 1742,
+          "rating": 4.7
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1616691268862802/Zucchini-Lasagne.html",
+        "slug": "Zucchini-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2153,
+      "recipe": {
+        "id": "4421391775033750",
+        "title": "Lasagne aus der Heißluftfritteuse",
+        "subtitle": "",
+        "createdAt": "2026-04-01T10:59:51+02:00",
+        "difficulty": 2,
+        "preparationTime": 15,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.71
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4421391775033750/Lasagne-aus-der-Heissluftfritteuse.html",
+        "slug": "Lasagne-aus-der-Heissluftfritteuse",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2152,
+      "recipe": {
+        "id": "1231981228220302",
+        "title": "Spinatlasagne",
+        "subtitle": "vegetarisch und kalorienarm",
+        "createdAt": "2008-12-02T17:14:39+01:00",
+        "difficulty": 2,
+        "preparationTime": 25,
+        "rating": {
+          "numVotes": 1437,
+          "rating": 4.64
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1231981228220302/Spinatlasagne.html",
+        "slug": "Spinatlasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2151,
+      "recipe": {
+        "id": "4148571660815100",
+        "title": "Lasagne mit Wild-Bolognese",
+        "subtitle": "Wild-Hack trifft auf frischen Nudelteig mit Kürbiskernen",
+        "createdAt": "2022-11-08T07:05:44+01:00",
+        "difficulty": 3,
+        "preparationTime": 120,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.65
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4148571660815100/Lasagne-mit-Wild-Bolognese.html",
+        "slug": "Lasagne-mit-Wild-Bolognese",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2150,
+      "recipe": {
+        "id": "96471038063925",
+        "title": "Zucchini-Lasagne ohne Fleisch",
+        "subtitle": "",
+        "createdAt": "2002-11-24T09:34:56+01:00",
+        "difficulty": 1,
+        "preparationTime": 20,
+        "rating": {
+          "numVotes": 987,
+          "rating": 4.59
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/96471038063925/Zucchini-Lasagne-ohne-Fleisch.html",
+        "slug": "Zucchini-Lasagne-ohne-Fleisch",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2149,
+      "recipe": {
+        "id": "4146111660061096",
+        "title": "Kürbis-Ricotta-Lasagne",
+        "subtitle": "Mit Hokkaido-Kürbis",
+        "createdAt": "2022-11-08T07:06:18+01:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.57
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4146111660061096/Kuerbis-Ricotta-Lasagne.html",
+        "slug": "Kuerbis-Ricotta-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2148,
+      "recipe": {
+        "id": "4153361662456450",
+        "title": "Sauerkraut-Lasagne",
+        "subtitle": "Mit Senf-Béchamel",
+        "createdAt": "2022-11-08T07:09:05+01:00",
+        "difficulty": 2,
+        "preparationTime": 40,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.53
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4153361662456450/Sauerkraut-Lasagne.html",
+        "slug": "Sauerkraut-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2147,
+      "recipe": {
+        "id": "4360911739860512",
+        "title": "Wirsing-Lasagne mit Raz el Hanout",
+        "subtitle": "Mit Kichererbsen",
+        "createdAt": "2025-03-07T10:08:10+01:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.52
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4360911739860512/Wirsing-Lasagne-mit-Raz-el-Hanout.html",
+        "slug": "Wirsing-Lasagne-mit-Raz-el-Hanout",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2146,
+      "recipe": {
+        "id": "4233891687368563",
+        "title": "Paprika-Zucchini-Lasagne",
+        "subtitle": "Mit Chiliflocken",
+        "createdAt": "2023-06-30T13:06:19+02:00",
+        "difficulty": 2,
+        "preparationTime": 45,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.44
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4233891687368563/Paprika-Zucchini-Lasagne.html",
+        "slug": "Paprika-Zucchini-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2145,
+      "recipe": {
+        "id": "4328221724841300",
+        "title": "Kartoffel-Hack-Lasagne",
+        "subtitle": "",
+        "createdAt": "2024-09-02T15:47:19+02:00",
+        "difficulty": 1,
+        "preparationTime": 35,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.41
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4328221724841300/Kartoffel-Hack-Lasagne.html",
+        "slug": "Kartoffel-Hack-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2144,
+      "recipe": {
+        "id": "4328121724831085",
+        "title": "Puten-Lasagne",
+        "subtitle": "",
+        "createdAt": "2024-09-02T15:47:12+02:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.4
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4328121724831085/Puten-Lasagne.html",
+        "slug": "Puten-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2143,
+      "recipe": {
+        "id": "4205241677652738",
+        "title": "Gulasch-Lasagne",
+        "subtitle": "Mit Rind- und Schweinefleisch",
+        "createdAt": "2023-03-07T07:17:32+01:00",
+        "difficulty": 2,
+        "preparationTime": 40,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.37
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4205241677652738/Gulasch-Lasagne.html",
+        "slug": "Gulasch-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2142,
+      "recipe": {
+        "id": "4328191724837805",
+        "title": "Kräuter-Lasagne",
+        "subtitle": "",
+        "createdAt": "2024-09-02T15:47:18+02:00",
+        "difficulty": 2,
+        "preparationTime": 20,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.34
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4328191724837805/Kraeuter-Lasagne.html",
+        "slug": "Kraeuter-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2141,
+      "recipe": {
+        "id": "4315421719482426",
+        "title": "Filo-Lasagne mit Spinat und Ziegenkäse",
+        "subtitle": "Mit Walnüssen",
+        "createdAt": "2024-08-01T07:44:46+02:00",
+        "difficulty": 2,
+        "preparationTime": 35,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.23
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4315421719482426/Filo-Lasagne-mit-Spinat-und-Ziegenkaese.html",
+        "slug": "Filo-Lasagne-mit-Spinat-und-Ziegenkaese",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 2140,
+      "recipe": {
+        "id": "4336561728976475",
+        "title": "Kürbis-Pilz-Lasagne",
+        "subtitle": "Mit Lorbeerblättern",
+        "createdAt": "2024-11-21T09:55:23+01:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 255,
+          "rating": 4.19
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/4336561728976475/Kuerbis-Pilz-Lasagne.html",
+        "slug": "Kuerbis-Pilz-Lasagne",
+        "hasImage": true
+      }
+    }
+  ]
+}

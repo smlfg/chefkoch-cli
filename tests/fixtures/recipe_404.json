@@ -1,0 +1,11 @@
+{
+  "notification": {
+    "hasErrors": true,
+    "messages": [
+      {
+        "type": "error",
+        "identifier": "entity_not_found"
+      }
+    ]
+  }
+}

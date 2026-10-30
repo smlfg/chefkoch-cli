@@ -1,0 +1,244 @@
+{
+  "id": "745721177147257",
+  "title": "Lasagne",
+  "subtitle": "Lasagne wie beim Italiener: würzige Bolognese, cremige Béchamel und eine goldbraune Käsekruste. Schon der Duft aus dem Ofen macht Vorfreude aufs gemeinsame Essen – und auf den ersten Bissen, bei dem alle zufrieden lächeln.",
+  "rating": {
+    "rating": 4.7,
+    "numVotes": 5033
+  },
+  "difficulty": 2,
+  "preparationTime": 30,
+  "cookingTime": 70,
+  "restingTime": 10,
+  "totalTime": 100,
+  "servings": 4,
+  "instructions": "Für die Bolognesesauce Zwiebel schälen und fein würfeln. Knoblauch schälen und fein hacken (oder in sehr feine Scheiben schneiden). Petersilie waschen, trocken schütteln und fein hacken.\n\n1 - 2 EL Olivenöl in einem breiten Topf stark erhitzen. Hackfleisch hineingeben und 5 - 7 Min. krümelig anbraten. Erst nach 1 - 2 Min. mit einem Kochlöffel oder Pfannenwender das Hackfleisch wenden, damit Röstaromen entstehen.\nTipp: Tritt viel Flüssigkeit aus dem Hackfleisch aus, sodass das Fleisch eher kocht, Hitze erhöhen und weiter braten, bis die Flüssigkeit verdampft ist. Bei Bedarf in zwei Portionen anbraten.\n\nZwiebelwürfel zu dem angebratenen Hackfleisch geben und 2 - 3 Min. mitbraten, bis sie glasig sind. Gehackten Knoblauch und geschnittene Petersilie dazugeben und 30 - 60 Sek. mitbraten. Tomatenmark einrühren und 1 Min. mitrösten.\n\nGeschälte Tomaten zu der Hackfleischmischung geben. Die Tomaten mit einem Kochlöffel oder Pfannenwender grob zerdrücken. Optional Rotwein (oder Brühe/Balsamico-Essig) einrühren. Mit Salz und Pfeffer würzen. Bolognesesauce ohne Deckel 30 - 40 Min. leise köcheln lassen und alle 5 - 10 Min. umrühren. Dabei immer wieder den Bratensatz vom Boden lösen.\n\nFür die Béchamelsauce Butter in einem Topf bei mittlerer Hitze schmelzen. Mehl schnell einrühren und 1 - 2 Min. unter ständigem Rühren hell anschwitzen.\n\nMilch in 3 - 4 Portionen unter kräftigem Rühren mit dem Schneebesen zugeben, bis die Sauce glatt ist. 8 - 12 Min. bei kleiner Hitze sanft köcheln. Dabei regelmäßig bis zum Topfboden umrühren. Mit Salz, Pfeffer, Zitronensaft und Muskat abschmecken.\n\nBackofen auf 180 °C Ober-/Unterhitze vorheizen. Auflaufform gleichmäßig einfetten.\n\nEine Schicht Bolognesesauce gleichmäßig auf dem Boden verteilen. Darauf Lasagneplatten legen, ohne dass sie überlappen. Darauf wieder Bolognesesauce geben und diese mit einer dünnen Schicht Béchamelsauce bedecken. Dann wieder eine Lage Nudelplatten. In dieser Reihenfolge weiter in die Form schichten, bis alles aufgebraucht ist. Die letzte Schicht ist Béchamelsauce.\nTipp: Ist die Sauce eher dick, 2 - 4 EL Wasser an die Formränder (nicht obendrauf) geben. Das hilft beim Garen, ohne die Lasagne zu verwässern.\n\nGeriebenen Käse gleichmäßig auf der Oberfläche verteilen und Butter in kleinen Flöckchen daraufsetzen.\n\nIm heißen Backofen 35 - 45 Min. bei 180 °C Ober-/Unterhitze backen, bis die Oberfläche goldbraun ist. Vor dem Anschneiden 10 bis 15 Minuten ruhen lassen.",
+  "tags": [
+    "Hauptspeise",
+    "Nudeln",
+    "Auflauf",
+    "Schwein",
+    "Rind",
+    "Italien",
+    "Europa",
+    "Käse",
+    "Pasta",
+    "Saucen",
+    "Fleisch"
+  ],
+  "fullTags": [
+    {
+      "id": 16,
+      "name": "Fleisch"
+    },
+    {
+      "id": 21,
+      "name": "Hauptspeise"
+    },
+    {
+      "id": 22,
+      "name": "Rind"
+    },
+    {
+      "id": 24,
+      "name": "Nudeln"
+    },
+    {
+      "id": 28,
+      "name": "Italien"
+    },
+    {
+      "id": 29,
+      "name": "Europa"
+    },
+    {
+      "id": 30,
+      "name": "Auflauf"
+    },
+    {
+      "id": 31,
+      "name": "Pasta"
+    },
+    {
+      "id": 34,
+      "name": "Saucen"
+    },
+    {
+      "id": 59,
+      "name": "Schwein"
+    },
+    {
+      "id": 83,
+      "name": "Käse"
+    }
+  ],
+  "siteUrl": "https://www.chefkoch.de/rezepte/745721177147257/Lasagne.html",
+  "slug": "Lasagne",
+  "categoryBreadcrumb": [
+    {
+      "id": "1",
+      "title": "Menüart",
+      "url": "https://www.chefkoch.de/rs/s0g1/Menueart.html"
+    },
+    {
+      "id": "9",
+      "title": "Hauptspeise",
+      "url": "https://www.chefkoch.de/rs/s0t21/Hauptspeise-Rezepte.html"
+    },
+    {
+      "id": "13",
+      "title": "Pasta & Nudel",
+      "url": "https://www.chefkoch.de/rs/s0t21,24/Hauptspeise-Nudeln-Rezepte.html"
+    }
+  ],
+  "ingredientGroups": [
+    {
+      "header": "Für die Bolognese: ",
+      "ingredients": [
+        {
+          "name": "Zwiebel(n)",
+          "amount": 1.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        },
+        {
+          "name": "Knoblauchzehe(n)",
+          "amount": 2.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        },
+        {
+          "name": "Petersilie",
+          "amount": 1.0,
+          "unit": "Bund",
+          "unitId": "16",
+          "isBasic": false
+        },
+        {
+          "name": "Olivenöl",
+          "amount": 2.0,
+          "unit": "EL",
+          "unitId": "13",
+          "isBasic": false
+        },
+        {
+          "name": "Hackfleisch, gemischtes",
+          "amount": 500.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        },
+        {
+          "name": "Tomatenmark",
+          "amount": 1.0,
+          "unit": "EL",
+          "unitId": "13",
+          "isBasic": false
+        },
+        {
+          "name": "Tomaten, geschälte",
+          "amount": 1.0,
+          "unit": "Dose",
+          "unitId": "166",
+          "isBasic": false
+        },
+        {
+          "name": "Rotwein",
+          "amount": 0.0,
+          "unit": "etwas",
+          "unitId": "22",
+          "isBasic": false
+        },
+        {
+          "name": "Salz und Pfeffer",
+          "amount": 0.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        }
+      ]
+    },
+    {
+      "header": "Für die Béchamelsauce: ",
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 30.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        },
+        {
+          "name": "Mehl",
+          "amount": 40.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        },
+        {
+          "name": "Milch",
+          "amount": 0.5,
+          "unit": "Liter",
+          "unitId": "165",
+          "isBasic": false
+        },
+        {
+          "name": "Salz und Pfeffer",
+          "amount": 0.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        },
+        {
+          "name": "Zitronensaft",
+          "amount": 2.0,
+          "unit": "TL",
+          "unitId": "14",
+          "isBasic": false
+        },
+        {
+          "name": "Muskatnuss, frisch geriebene",
+          "amount": 1.0,
+          "unit": "Msp.",
+          "unitId": "5",
+          "isBasic": false
+        }
+      ]
+    },
+    {
+      "header": "Außerdem: ",
+      "ingredients": [
+        {
+          "name": "Fett für die Form",
+          "amount": 0.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        },
+        {
+          "name": "Lasagneplatte(n)",
+          "amount": 300.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        },
+        {
+          "name": "Käse, geriebener",
+          "amount": 200.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        },
+        {
+          "name": "Butterflöckchen",
+          "amount": 20.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        }
+      ]
+    }
+  ]
+}

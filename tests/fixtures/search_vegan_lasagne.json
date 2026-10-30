@@ -1,0 +1,96 @@
+{
+  "count": 86,
+  "queryId": "",
+  "results": [
+    {
+      "score": 86,
+      "recipe": {
+        "id": "2812481433250378",
+        "title": "Die ultimative vegane Lasagne",
+        "subtitle": "",
+        "createdAt": "2015-06-04T09:31:29+02:00",
+        "difficulty": 2,
+        "preparationTime": 45,
+        "rating": {
+          "numVotes": 134,
+          "rating": 4.66
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2812481433250378/Die-ultimative-vegane-Lasagne.html",
+        "slug": "Die-ultimative-vegane-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 85,
+      "recipe": {
+        "id": "2617931411122824",
+        "title": "Vegane Bolognese-Lasagne",
+        "subtitle": "mit Sojabolognese, Béchamelsoße und Hefeschmelz",
+        "createdAt": "2014-09-21T21:47:36+02:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 40,
+          "rating": 4.3
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2617931411122824/Vegane-Bolognese-Lasagne.html",
+        "slug": "Vegane-Bolognese-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 84,
+      "recipe": {
+        "id": "3824501582218163",
+        "title": "Vegane Gemüselasagne",
+        "subtitle": "einfach und saftig",
+        "createdAt": "2020-02-21T09:44:13+01:00",
+        "difficulty": 2,
+        "preparationTime": 20,
+        "rating": {
+          "numVotes": 4,
+          "rating": 4.75
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/3824501582218163/Vegane-Gemueselasagne.html",
+        "slug": "Vegane-Gemueselasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 83,
+      "recipe": {
+        "id": "3311501491853740",
+        "title": "Lasagne, vegan und glutenfrei",
+        "subtitle": "Béchamelsauce und Bolognese Sauce mit Linsen, ohne Sojagranulat",
+        "createdAt": "2017-04-13T08:49:32+02:00",
+        "difficulty": 2,
+        "preparationTime": 60,
+        "rating": {
+          "numVotes": 9,
+          "rating": 4.67
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/3311501491853740/Lasagne-vegan-und-glutenfrei.html",
+        "slug": "Lasagne-vegan-und-glutenfrei",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 82,
+      "recipe": {
+        "id": "1339611238799797",
+        "title": "Vegane Lasagne",
+        "subtitle": "schnelles und einfaches Grundrezept",
+        "createdAt": "2009-04-05T16:57:22+02:00",
+        "difficulty": 2,
+        "preparationTime": 25,
+        "rating": {
+          "numVotes": 70,
+          "rating": 4.39
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1339611238799797/Vegane-Lasagne.html",
+        "slug": "Vegane-Lasagne",
+        "hasImage": true
+      }
+    }
+  ]
+}
