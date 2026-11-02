@@ -18,6 +18,7 @@ from .errors import (
 )
 from .formatting import format_recipe_text, format_search_line, format_shopping_text
 from .parsing import normalize_recipe
+from .watch import run_watch
 
 
 class _Parser(argparse.ArgumentParser):
@@ -84,7 +85,7 @@ def build_parser() -> argparse.ArgumentParser:
     common = _common_options()
     parser = _Parser(
         prog="chefkoch",
-        description="Chefkoch.de-Rezepte im Terminal: Suchen, Anzeigen, Einkaufsliste.",
+        description="Chefkoch.de-Rezepte im Terminal: Suchen, Anzeigen, Einkaufsliste, Watch.",
     )
     parser.add_argument(
         "--version",
@@ -169,6 +170,22 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="N",
         help="Zielportionen für jedes Rezept",
     )
+
+    watch = subparsers.add_parser(
+        "watch",
+        parents=[common],
+        help="Neue Treffer zu einem Suchbegriff verfolgen",
+        description="Treffer merken und beim nächsten Lauf neue Rezepte zeigen.",
+    )
+    watch.add_argument("begriff", help="Suchbegriff")
+    _add_search_filters(watch)
+    watch.add_argument(
+        "--limit",
+        type=int,
+        default=service.DEFAULT_WATCH_LIMIT,
+        metavar="N",
+        help="höchstens N Treffer betrachten (Default 50)",
+    )
     return parser
 
 
@@ -220,6 +237,16 @@ def _search_text(data: dict[str, Any]) -> str:
     return "\n".join(
         format_search_line(index, item)
         for index, item in enumerate(data.get("results") or [], start=1)
+    )
+
+
+def _watch_text(data: dict[str, Any]) -> str:
+    query = data.get("query") or ""
+    results = list(data.get("new") or [])
+    if not results:
+        return f"Keine neuen Rezepte für {query!r}."
+    return "\n".join(
+        [f"Neue Rezepte für {query!r}:", _result_list_text(results)]
     )
 
 
@@ -348,6 +375,20 @@ def _run(args: argparse.Namespace, timeout: float, json_mode: bool) -> None:
             format_shopping_text(data["items"], portions),
             json_mode,
         )
+        return
+    if args.command == "watch":
+        with ApiClient(timeout=timeout) as client:
+            data = run_watch(
+                client,
+                args.begriff,
+                vegetarisch=args.vegetarisch,
+                vegan=args.vegan,
+                max_zeit=args.max_zeit,
+                min_bewertung=args.min_bewertung,
+                schwierigkeit=args.schwierigkeit,
+                limit=args.limit,
+            )
+        _emit_success("watch", data, _watch_text(data), json_mode)
         return
     raise UsageError(
         "Unbekanntes Unterkommando.",
