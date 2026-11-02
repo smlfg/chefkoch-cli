@@ -149,6 +149,26 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="N",
         help="Zielportionen (Default: Portionen des Rezepts)",
     )
+
+    einkauf = subparsers.add_parser(
+        "einkaufsliste",
+        parents=[common],
+        help="Einkaufsliste aus mehreren Rezepten erzeugen",
+        description="Zutaten mehrerer Rezepte skalieren und zusammenfassen.",
+    )
+    einkauf.add_argument(
+        "referenzen",
+        nargs="+",
+        metavar="NAME|ID|URL",
+        help="Rezeptnamen, IDs oder URLs",
+    )
+    einkauf.add_argument(
+        "--portionen",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Zielportionen für jedes Rezept",
+    )
     return parser
 
 
@@ -307,6 +327,27 @@ def _run(args: argparse.Namespace, timeout: float, json_mode: bool) -> None:
                 json_mode=json_mode,
             )
         _emit_success("rezept", recipe, format_recipe_text(recipe), json_mode)
+        return
+    if args.command == "einkaufsliste":
+        portions = service.validate_servings(args.portionen)
+        recipes: list[dict[str, Any]] = []
+        with ApiClient(timeout=timeout) as client:
+            for reference in args.referenzen:
+                recipes.append(
+                    _fetch_recipe(
+                        client,
+                        reference,
+                        portions,
+                        json_mode=json_mode,
+                    )
+                )
+        data = service.build_shopping_list(recipes, portions)
+        _emit_success(
+            "einkaufsliste",
+            data,
+            format_shopping_text(data["items"], portions),
+            json_mode,
+        )
         return
     raise UsageError(
         "Unbekanntes Unterkommando.",

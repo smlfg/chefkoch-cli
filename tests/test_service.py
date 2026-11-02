@@ -117,3 +117,48 @@ def test_vegane_suche_prueft_details():
 
     assert "2114131340630587" not in {item["id"] for item in data["results"]}
     assert data["results"][0]["vegan"] is True
+
+
+def test_einkaufsliste_summiert_nach_name_und_einheit():
+    from chefkoch_cli.parsing import normalize_recipe
+
+    recipes = [
+        normalize_recipe(load("recipe_2812481433250378.json"), 4),
+        normalize_recipe(load("recipe_2114131340630587.json"), 4),
+    ]
+
+    data = service.build_shopping_list(recipes, 4)
+    items = {(item["name"], item["unit"]): item for item in data["items"]}
+
+    knoblauch = items[("Knoblauchzehe(n)", "")]
+    assert knoblauch["amount"] == pytest.approx(4.67)
+    assert set(knoblauch["recipeIds"]) == {
+        "2812481433250378",
+        "2114131340630587",
+    }
+    assert items[("Käse, geriebener", "g")]["amount"] == pytest.approx(266.67)
+    assert items[("Naturtofu", "g")]["amount"] == pytest.approx(125.0)
+
+
+def test_einkaufsliste_trennt_verschiedene_einheiten():
+    recipes = [
+        {
+            "id": "1",
+            "servings": 1,
+            "requestedServings": 1,
+            "ingredientGroups": [
+                {
+                    "header": "",
+                    "ingredients": [
+                        {"name": "Mehl", "amount": 100, "unit": "g"},
+                        {"name": "Mehl", "amount": 2, "unit": "EL"},
+                    ],
+                }
+            ],
+        }
+    ]
+
+    data = service.build_shopping_list(recipes, 1)
+
+    assert len(data["items"]) == 2
+    assert [item["unit"] for item in data["items"]] == ["EL", "g"]
