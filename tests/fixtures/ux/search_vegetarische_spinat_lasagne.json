@@ -1,0 +1,96 @@
+{
+  "count": 218,
+  "queryId": "",
+  "results": [
+    {
+      "score": 218,
+      "recipe": {
+        "id": "2114131340630587",
+        "title": "Vegetarische Spinat-Gemüse-Lasagne mit Tomatensoße",
+        "subtitle": "Überbackene Spinat-Gemüse-Lasagne mit würziger Tomatensauce",
+        "createdAt": "2012-06-26T17:48:41+02:00",
+        "difficulty": 2,
+        "preparationTime": 25,
+        "rating": {
+          "numVotes": 2150,
+          "rating": 4.85
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2114131340630587/Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse.html",
+        "slug": "Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 217,
+      "recipe": {
+        "id": "2356391374557463",
+        "title": "Vegetarische Spinat-Tomaten-Lasagne",
+        "subtitle": "",
+        "createdAt": "2013-07-23T18:14:59+02:00",
+        "difficulty": 2,
+        "preparationTime": 60,
+        "rating": {
+          "numVotes": 3,
+          "rating": 4.33
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2356391374557463/Vegetarische-Spinat-Tomaten-Lasagne.html",
+        "slug": "Vegetarische-Spinat-Tomaten-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 216,
+      "recipe": {
+        "id": "1191361224959138",
+        "title": "Spinat - Tomaten - Lasagne",
+        "subtitle": "",
+        "createdAt": "2008-10-26T18:02:28+01:00",
+        "difficulty": 2,
+        "preparationTime": 40,
+        "rating": {
+          "numVotes": 11,
+          "rating": 4.73
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/1191361224959138/Spinat-Tomaten-Lasagne.html",
+        "slug": "Spinat-Tomaten-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 215,
+      "recipe": {
+        "id": "3340981496420766",
+        "title": "Vegane Spinat-Tomaten-Lasagne",
+        "subtitle": "mit Cashewkernen, Sojasahne und Weißwein",
+        "createdAt": "2017-06-10T23:27:21+02:00",
+        "difficulty": 2,
+        "preparationTime": 45,
+        "rating": {
+          "numVotes": 3,
+          "rating": 4.33
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/3340981496420766/Vegane-Spinat-Tomaten-Lasagne.html",
+        "slug": "Vegane-Spinat-Tomaten-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 214,
+      "recipe": {
+        "id": "950811200586076",
+        "title": "Grüne Lasagne",
+        "subtitle": "vegetarischer Spinat - Tomatenauflauf",
+        "createdAt": "2008-01-17T17:24:13+01:00",
+        "difficulty": 2,
+        "preparationTime": 45,
+        "rating": {
+          "numVotes": 3,
+          "rating": 4
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/950811200586076/Gruene-Lasagne.html",
+        "slug": "Gruene-Lasagne",
+        "hasImage": true
+      }
+    }
+  ]
+}

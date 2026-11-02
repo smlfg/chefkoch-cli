@@ -1,0 +1,24 @@
+{
+  "count": 1,
+  "queryId": "",
+  "results": [
+    {
+      "score": 1,
+      "recipe": {
+        "id": "2812481433250378",
+        "title": "Die ultimative vegane Lasagne",
+        "subtitle": "",
+        "createdAt": "2015-06-04T09:31:29+02:00",
+        "difficulty": 2,
+        "preparationTime": 45,
+        "rating": {
+          "numVotes": 134,
+          "rating": 4.66
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2812481433250378/Die-ultimative-vegane-Lasagne.html",
+        "slug": "Die-ultimative-vegane-Lasagne",
+        "hasImage": true
+      }
+    }
+  ]
+}

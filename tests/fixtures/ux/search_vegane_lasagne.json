@@ -1,0 +1,96 @@
+{
+  "count": 86,
+  "queryId": "",
+  "results": [
+    {
+      "score": 86,
+      "recipe": {
+        "id": "2812481433250378",
+        "title": "Die ultimative vegane Lasagne",
+        "subtitle": "",
+        "createdAt": "2015-06-04T09:31:29+02:00",
+        "difficulty": 2,
+        "preparationTime": 45,
+        "rating": {
+          "numVotes": 134,
+          "rating": 4.66
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2812481433250378/Die-ultimative-vegane-Lasagne.html",
+        "slug": "Die-ultimative-vegane-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 85,
+      "recipe": {
+        "id": "2617931411122824",
+        "title": "Vegane Bolognese-Lasagne",
+        "subtitle": "mit Sojabolognese, Béchamelsoße und Hefeschmelz",
+        "createdAt": "2014-09-21T21:47:36+02:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 40,
+          "rating": 4.3
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2617931411122824/Vegane-Bolognese-Lasagne.html",
+        "slug": "Vegane-Bolognese-Lasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 84,
+      "recipe": {
+        "id": "3824501582218163",
+        "title": "Vegane Gemüselasagne",
+        "subtitle": "einfach und saftig",
+        "createdAt": "2020-02-21T09:44:13+01:00",
+        "difficulty": 2,
+        "preparationTime": 20,
+        "rating": {
+          "numVotes": 4,
+          "rating": 4.75
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/3824501582218163/Vegane-Gemueselasagne.html",
+        "slug": "Vegane-Gemueselasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 83,
+      "recipe": {
+        "id": "2580281404670704",
+        "title": "Vegane Gemüselasagne",
+        "subtitle": "",
+        "createdAt": "2014-07-15T11:51:38+02:00",
+        "difficulty": 1,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 25,
+          "rating": 4.48
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/2580281404670704/Vegane-Gemueselasagne.html",
+        "slug": "Vegane-Gemueselasagne",
+        "hasImage": true
+      }
+    },
+    {
+      "score": 82,
+      "recipe": {
+        "id": "3322271493312524",
+        "title": "Gesunde Lasagne mit veganer Bechamelsoße",
+        "subtitle": "Klassiker in gesund, vegetarisch und auf Wunsch vegan",
+        "createdAt": "2017-05-05T10:39:28+02:00",
+        "difficulty": 2,
+        "preparationTime": 30,
+        "rating": {
+          "numVotes": 11,
+          "rating": 4.27
+        },
+        "siteUrl": "https://www.chefkoch.de/rezepte/3322271493312524/Gesunde-Lasagne-mit-veganer-Bechamelsosse.html",
+        "slug": "Gesunde-Lasagne-mit-veganer-Bechamelsosse",
+        "hasImage": true
+      }
+    }
+  ]
+}

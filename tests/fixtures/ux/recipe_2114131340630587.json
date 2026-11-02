@@ -1,0 +1,224 @@
+{
+  "id": "2114131340630587",
+  "title": "Vegetarische Spinat-Gemüse-Lasagne mit Tomatensoße",
+  "subtitle": "Überbackene Spinat-Gemüse-Lasagne mit würziger Tomatensauce",
+  "rating": {
+    "rating": 4.85,
+    "numVotes": 2149
+  },
+  "difficulty": 2,
+  "preparationTime": 25,
+  "cookingTime": 55,
+  "restingTime": 10,
+  "totalTime": 80,
+  "servings": 3,
+  "instructions": "Karotten, Champignons und Zwiebel klein schneiden. Zuerst die Zwiebelwürfel in einer heißen Pfanne mit etwas Öl anbraten, bis sie glasig sind. Danach das restliche Gemüse dazugeben und kurz mitbraten. Die Milch dazugeben und den Rahmspinat darin erhitzen, bis die Blätter nicht mehr gefroren sind und die Rahmsoße leicht eingedickt ist. Jetzt den Frischkäse sowie das Gemüsebrühpulver dazugeben und gut verrühren. Fünf Minuten köcheln lassen, bis die Soße schön eingedickt ist. Zum Schluss eine Knoblauchzehe dazu pressen und mit Salz, Pfeffer und Chili abschmecken. Das Spinatgemisch darf ruhig gut würzig sein, da der Spinat beim Backen relativ viel Salz \"schluckt\". \n\nIn einem separaten Topf die Butter erhitzen, bis sie vollständig zerlaufen ist. Das Mehl unter Rühren hinzugeben und zu einer glatten Masse verrühren. Unter stetem Rühren nun die passierten Tomaten dazugeben, danach direkt die Sahne dazugießen und alles kurz aufkochen. Eine Knoblauchzehe dazupressen und mit Salz und Pfeffer abschmecken. Auch hier muss nicht am Salz gespart werden. \n\nMit der Tomatensoße und dem Spinat dünn den Boden einer Auflaufform bedecken und jetzt abwechselnd Lasagneplatten, Spinatgemisch und Tomatensoße darin schichten. Mit der Soße abschließen und lückenlos mit Reibekäse bestreuen. \n\nIm heißen Backofen bei 180 °C Umluft ca. 30 Minuten backen. Nach dem Backen noch fünf bis zehn Minuten im ausgeschalteten Backofen stehen lassen, dann bleibt die Lasagne perfekt in Form und zerläuft nicht. \n\nTipp: Sehr lecker ist es auch, auf die Spinat- und Tomatensauce erst eine Schicht fein geschnittene Fetascheiben zu legen, bevor die nächste Lasagneplattenschicht kommt.",
+  "tags": [
+    "Hauptspeise",
+    "Gemüse",
+    "Auflauf",
+    "vegetarisch",
+    "Hauptspeise",
+    "Pilze",
+    "Hauptspeise",
+    "Nudeln",
+    "Italien",
+    "Europa",
+    "Gemüse",
+    "Käse",
+    "Pasta",
+    "Nudeln",
+    "Saucen"
+  ],
+  "fullTags": [
+    {
+      "id": 18,
+      "name": "Gemüse"
+    },
+    {
+      "id": 21,
+      "name": "Hauptspeise"
+    },
+    {
+      "id": 24,
+      "name": "Nudeln"
+    },
+    {
+      "id": 28,
+      "name": "Italien"
+    },
+    {
+      "id": 29,
+      "name": "Europa"
+    },
+    {
+      "id": 30,
+      "name": "Auflauf"
+    },
+    {
+      "id": 31,
+      "name": "Pasta"
+    },
+    {
+      "id": 32,
+      "name": "Vegetarisch"
+    },
+    {
+      "id": 34,
+      "name": "Saucen"
+    },
+    {
+      "id": 83,
+      "name": "Käse"
+    },
+    {
+      "id": 140,
+      "name": "Pilze"
+    }
+  ],
+  "siteUrl": "https://www.chefkoch.de/rezepte/2114131340630587/Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse.html",
+  "slug": "Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse",
+  "categoryBreadcrumb": [
+    {
+      "id": "1",
+      "title": "Menüart",
+      "url": "https://www.chefkoch.de/rs/s0g1/Menueart.html"
+    },
+    {
+      "id": "9",
+      "title": "Hauptspeise",
+      "url": "https://www.chefkoch.de/rs/s0t21/Hauptspeise-Rezepte.html"
+    },
+    {
+      "id": "114",
+      "title": "Gemüse",
+      "url": "https://www.chefkoch.de/rs/s0t18,21/Gemuese-Hauptspeise-Rezepte.html"
+    }
+  ],
+  "ingredientGroups": [
+    {
+      "header": " ",
+      "ingredients": [
+        {
+          "name": "Karotte(n)",
+          "amount": 2.0,
+          "unit": "große",
+          "unitId": "21",
+          "isBasic": false
+        },
+        {
+          "name": "Champignons",
+          "amount": 7.0,
+          "unit": "m.-große",
+          "unitId": "25",
+          "isBasic": false
+        },
+        {
+          "name": "Zwiebel(n)",
+          "amount": 1.0,
+          "unit": "große",
+          "unitId": "21",
+          "isBasic": false
+        },
+        {
+          "name": "Öl",
+          "amount": 1.0,
+          "unit": "EL",
+          "unitId": "13",
+          "isBasic": false
+        },
+        {
+          "name": "Milch",
+          "amount": 5.0,
+          "unit": "EL",
+          "unitId": "13",
+          "isBasic": false
+        },
+        {
+          "name": "Blattspinat, TK",
+          "amount": 600.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        },
+        {
+          "name": "Kräuterfrischkäse",
+          "amount": 0.5,
+          "unit": "Pck.",
+          "unitId": "169",
+          "isBasic": false
+        },
+        {
+          "name": "Gemüsebrühepulver",
+          "amount": 1.0,
+          "unit": "EL, gestr.",
+          "unitId": "59",
+          "isBasic": false
+        },
+        {
+          "name": "Knoblauchzehe(n)",
+          "amount": 2.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        },
+        {
+          "name": "Salz und Pfeffer",
+          "amount": 0.0,
+          "unit": "",
+          "unitId": "9",
+          "isBasic": false
+        },
+        {
+          "name": "Chilipulver",
+          "amount": 2.0,
+          "unit": "Prisen",
+          "unitId": "238",
+          "isBasic": false
+        },
+        {
+          "name": "Butter",
+          "amount": 3.0,
+          "unit": "EL",
+          "unitId": "13",
+          "isBasic": false
+        },
+        {
+          "name": "Mehl",
+          "amount": 2.0,
+          "unit": "EL",
+          "unitId": "13",
+          "isBasic": false
+        },
+        {
+          "name": "Tomaten, passierte",
+          "amount": 500.0,
+          "unit": "ml",
+          "unitId": "4",
+          "isBasic": false
+        },
+        {
+          "name": "süße Sahne",
+          "amount": 150.0,
+          "unit": "ml",
+          "unitId": "4",
+          "isBasic": false
+        },
+        {
+          "name": "Lasagneplatte(n)",
+          "amount": 1.0,
+          "unit": "Paket",
+          "unitId": "243",
+          "isBasic": false
+        },
+        {
+          "name": "Käse, geriebener",
+          "amount": 200.0,
+          "unit": "g",
+          "unitId": "3",
+          "isBasic": false
+        }
+      ]
+    }
+  ]
+}
