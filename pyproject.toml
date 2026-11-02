@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chefkoch-cli"
+version = "0.1.0"
+description = "Chefkoch.de-Rezepte im Terminal: Suche, Rezeptdetails, Einkaufsliste und Watch"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "smlfg", email = "186922365+smlfg@users.noreply.github.com" },
+]
+keywords = ["chefkoch", "recipes", "cli", "terminal"]
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = ["httpx>=0.24"]
+
+[project.scripts]
+chefkoch = "chefkoch_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
