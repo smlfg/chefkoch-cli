@@ -17,6 +17,7 @@ from .errors import (
     UserAbortError,
 )
 from .formatting import format_recipe_text, format_search_line, format_shopping_text
+from .parsing import normalize_recipe
 
 
 class _Parser(argparse.ArgumentParser):
@@ -133,6 +134,21 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="N",
         help="Seite (Default 1)",
     )
+
+    rezept = subparsers.add_parser(
+        "rezept",
+        parents=[common],
+        help="Ein Rezept per Name, ID oder URL anzeigen",
+        description="Ein Rezept anzeigen und Zutaten auf Portionen skalieren.",
+    )
+    rezept.add_argument("referenz", metavar="NAME|ID|URL", help="Rezeptname, ID oder URL")
+    rezept.add_argument(
+        "--portionen",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Zielportionen (Default: Portionen des Rezepts)",
+    )
     return parser
 
 
@@ -246,6 +262,24 @@ def choose_result(
         )
 
 
+def _fetch_recipe(
+    client: ApiClient,
+    reference: str,
+    requested_servings: int | None,
+    *,
+    json_mode: bool,
+) -> dict[str, Any]:
+    kind, value = service.parse_recipe_reference(reference)
+    if kind == "name":
+        results = service.search_candidates(client, value)
+        chosen = choose_result(results, json_mode=json_mode, query=value)
+        recipe_id = str(chosen.get("id"))
+    else:
+        recipe_id = value
+    payload = client.recipe(recipe_id)
+    return normalize_recipe(payload, requested_servings)
+
+
 def _run(args: argparse.Namespace, timeout: float, json_mode: bool) -> None:
     if args.command == "suche":
         with ApiClient(timeout=timeout) as client:
@@ -262,6 +296,17 @@ def _run(args: argparse.Namespace, timeout: float, json_mode: bool) -> None:
                 seite=args.seite,
             )
         _emit_success("suche", data, _search_text(data), json_mode)
+        return
+    if args.command == "rezept":
+        portions = service.validate_servings(args.portionen)
+        with ApiClient(timeout=timeout) as client:
+            recipe = _fetch_recipe(
+                client,
+                args.referenz,
+                portions,
+                json_mode=json_mode,
+            )
+        _emit_success("rezept", recipe, format_recipe_text(recipe), json_mode)
         return
     raise UsageError(
         "Unbekanntes Unterkommando.",
