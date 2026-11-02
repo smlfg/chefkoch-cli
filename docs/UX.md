@@ -1,92 +1,116 @@
-# UX-Spec: kurstool
+# UX-Spec: chefkoch
 
-Diese Datei ist die Vorlage für `docs/UX.md` in jedem neuen Repo. Sie wird vor der ersten Codezeile ausgefüllt. Alle Befehle sind so abtippbar, wie ein Mensch sie im Terminal eingibt. Beispielwerte (Tool `kurstool`, Kursnummern, Mails auf `.invalid`) werden durch die echten Werte des Projekts ersetzt.
+`chefkoch` liest Rezepte von Chefkoch.de im Terminal: Suche mit Filtern,
+Rezeptdetails mit auf Portionen skalierten Zutaten, Einkaufsliste aus mehreren
+Rezepten und Watch auf neue Treffer. Das Tool ist ausschließlich lesend. Es
+gibt keinen Login, keine schreibende Web-Aktion und deshalb auch keine
+`ux-formsteps`.
 
-Ablauf beim Ausfüllen:
-
-1. Website live öffnen und die drei wichtigsten Aufgaben eines Menschen heraussuchen.
-2. Jede Aufgabe als Sitzung mitschreiben: Befehl, Eingabe, erwartete Ausgabe.
-3. Lesende Routen und alle Formularschritte der schreibenden Aktion ergänzen.
-4. Fixtures unter `tests/fixtures/ux/` ablegen.
-5. `python tests/harness/ux_check.py --spec-only` laufen lassen; erst bei grünem UX01 weiterbauen.
+Alle Befehle sind so abtippbar, wie ein Mensch sie im Terminal eingibt.
+Ausgaben im Terminal sind lesbar; JSON erscheint nur mit `--json` oder wenn
+stdout kein TTY ist. Die Sitzungen unten laufen im TTY und erwarten die
+lesbare Form.
 
 ## Meta
 
-Das Meta-Objekt benennt den Befehlsnamen im PATH, den Installationsbefehl und alle Umgebungsvariablen. `base_url_env` ist Pflicht, sobald es Routen oder Formsteps gibt. `credential_env` führt dazu, dass das Tool einen `login`-Befehl haben muss.
+`CHEFKOCH_BASE_URL` überschreibt die API-Basis (Standard
+`https://api.chefkoch.de`) und wird von der Harness auf den Fake-Server
+gesetzt. `CHEFKOCH_MIN_INTERVAL=0` schaltet den Mindestabstand von einer
+Sekunde zwischen Requests nur für Tests ab.
 
 ```ux-meta
-{"tool": "kurstool",
- "install": "pipx install git+https://github.com/smlfg/kurstool-cli",
- "base_url_env": "KURSTOOL_BASE_URL",
- "env": {"KURSTOOL_STATUSGRUPPE": "studierende"},
- "credential_env": ["KURSTOOL_LOGIN_USER", "KURSTOOL_LOGIN_PASSWORD"]}
+{"tool": "chefkoch",
+ "install": "pipx install git+https://github.com/smlfg/chefkoch-cli",
+ "base_url_env": "CHEFKOCH_BASE_URL",
+ "env": {"CHEFKOCH_MIN_INTERVAL": "0"}}
 ```
 
 ## Sitzungen
 
-Jede Sitzung ist eine Nutzer-Aufgabe. Es müssen mindestens drei sein, darunter Login, Suche per Name und eine schreibende Aktion. `$` ist ein Befehl, `>` eine Eingabe, `<` eine erwartete Ausgabe und `!` der erwartete Exit-Code. Der Installationsbefehl wird von der Harness durch eine lokale Installation in ein frisches venv ersetzt.
+### Installation und erste Suche
 
-### Installation und Login
-
-Der Login fragt im Terminal interaktiv nach Benutzer und Passwort. Das Passwort wird nicht angezeigt und nicht gespeichert; die Sitzung landet im Schlüsselbund oder in einer Datei mit Rechten 0600. Die Zugangsdaten stammen aus einem Testkonto, nie aus echten Daten.
+`pipx` legt den Befehl `chefkoch` in den PATH. Der erste Befehl sucht
+positional nach einem Begriff und zeigt eine lesbare Trefferliste mit ID,
+Bewertung, Zubereitungszeit und Schwierigkeit. Die Standardsortierung ist
+Bewertung absteigend.
 
 ```ux-session
-$ pipx install git+https://github.com/smlfg/kurstool-cli
-< kurstool
-$ kurstool login
-< Benutzer:
-> max.mustermann@example.invalid
-< Passwort:
-> geheim
-< Login erfolgreich
+$ pipx install git+https://github.com/smlfg/chefkoch-cli
+$ chefkoch suche lasagne --limit 5
+< 1) Lasagne (ID 745721177147257) · 4,7★ · 30 Min. · normal
+< 2) Italienische Lasagne (ID 491931143472316) · 4,6★ · 60 Min. · normal
+< 3) Lasagne Bolognese (ID 1112181217260303) · 4,6★ · 60 Min. · normal
+< 4) Béchamel-Hackfleisch-Lasagne (ID 555661153310338) · 4,6★ · 25 Min. · normal
+< 5) Idiotensichere Lasagne (ID 484751142525322) · 4,5★ · 20 Min. · normal
 ! exit 0
 ```
 
-### Kurse nach Namen suchen
+### Rezept per Name mit Auswahl und Portionen
 
-Der Suchbegriff ist positional. Die Ausgabe zeigt Namen und Kursnummer, damit ein Mensch ohne Nachschlagen weiterarbeiten kann.
+`chefkoch rezept "vegane lasagne"` sucht per Name. Bei mehreren Treffern
+erscheint im TTY eine nummerierte Auswahl. Nach der Eingabe zeigt das Tool das
+gewählte Rezept; die Zutaten sind auf vier Portionen skaliert (Basis acht).
+Bewertungen haben eine Nachkommastelle, Mengen höchstens zwei und werden mit
+Komma ausgegeben.
 
 ```ux-session
-$ kurstool search volleyball
-< 1) Volleyball Anfänger (Kurs 32304)
-< 2) Volleyball Fortgeschritten (Kurs 32305)
+$ chefkoch rezept "vegane lasagne" --portionen 4
+< 1) Vegane Gemüselasagne (ID 3824501582218163) · 4,8★ · 20 Min. · normal
+< 2) Die ultimative vegane Lasagne (ID 2812481433250378) · 4,7★ · 45 Min. · normal
+< 3) Vegane Gemüselasagne (ID 2580281404670704) · 4,5★ · 30 Min. · simpel
+< 4) Vegane Bolognese-Lasagne (ID 2617931411122824) · 4,3★ · 30 Min. · normal
+< 5) Gesunde Lasagne mit veganer Bechamelsoße (ID 3322271493312524) · 4,3★ · 30 Min. · normal
+< Auswahl [1-5]:
+> 2
+< Die ultimative vegane Lasagne
+< Portionen: 4 (Basis: 8)
+< 125 g Naturtofu
+< 125 g Räuchertofu
 ! exit 0
 ```
 
-### Kurs verbindlich buchen
+### Einkaufsliste aus zwei Rezepten per Name
 
-Die schreibende Aktion zeigt zuerst Kurs, Ort und Preis. Danach fragt sie mit Default Nein. Erst nach `j` werden alle Formularschritte bis zur endgültigen Bestätigung gesendet. Bei `N` endet der Befehl ohne Request an einen Schritt ohne `before_confirm`.
+Der erste Name ist eindeutig. Der zweite liefert mehrere Treffer; nach der
+Auswahl werden beide Rezepte auf vier Portionen skaliert und die Zutaten
+zusammengefasst. Gleiche Name+Einheit werden summiert, hier
+`Knoblauchzehe(n)` aus beiden Rezepten. Andere Einheiten bleiben getrennt.
 
 ```ux-session
-$ kurstool book "Volleyball Anfänger"
-< Kurs: Volleyball Anfänger (32304)
-< Ort: Sporthalle Nord
-< Preis: 25,00 EUR
-< Buchung verbindlich? [j/N]
-> j
-< Buchung bestätigt
-< Bestätigungsnummer: KB-2026-0042
+$ chefkoch einkaufsliste "die ultimative vegane lasagne" "vegetarische spinat gemüse lasagne" --portionen 4
+< 1) Vegetarische Spinat-Gemüse-Lasagne mit Tomatensoße (ID 2114131340630587) · 4,8★ · 25 Min. · normal
+< 2) Spinat - Tomaten - Lasagne (ID 1191361224959138) · 4,7★ · 40 Min. · normal
+< 3) Vegane Spinat-Tomaten-Lasagne (ID 3340981496420766) · 4,3★ · 45 Min. · normal
+< 4) Vegetarische Spinat-Tomaten-Lasagne (ID 2356391374557463) · 4,3★ · 60 Min. · normal
+< 5) Grüne Lasagne (ID 950811200586076) · 4,0★ · 45 Min. · normal
+< Auswahl [1-5]:
+> 1
+< Einkaufsliste (4 Portionen je Rezept)
+< 4,67 Knoblauchzehe(n)
+< 266,67 g Käse, geriebener
+< 125 g Naturtofu
 ! exit 0
 ```
 
 ## Lesende Routen
 
-Hier stehen alle Routen, die die Sitzungen gegen den Fake-Server brauchen. `path` wird ohne Querystring exakt verglichen; `query_contains` ist optional. Der Login ist ein POST, löst aber keine Buchung aus und gehört deshalb zu den lesenden Routen. Die Antwortdateien liegen relativ zum Repo.
+Alle Sitzungen brauchen nur `GET /v2/recipes` und `GET /v2/recipes/<id>`.
+Spezifischere Suchrouten stehen vor allgemeineren, weil der Fake-Server die
+erste passende Route nimmt. Die Antworten sind echte Live-Antworten, auf die
+benötigten Felder gekürzt und anonymisiert; Owner-, Editor- und Avatar-Felder
+fehlen.
 
 ```ux-routes
-[{"method":"POST","path":"/login","response":"tests/fixtures/ux/login_erfolg.html","status":200,"content_type":"text/html; charset=utf-8"},
- {"method":"GET","path":"/kurse","query_contains":"volleyball","response":"tests/fixtures/ux/kurse.html","status":200,"content_type":"text/html; charset=utf-8"},
- {"method":"GET","path":"/kurse/32304","response":"tests/fixtures/ux/kurs_32304.html","status":200,"content_type":"text/html; charset=utf-8"}]
+[{"method":"GET","path":"/v2/recipes","query_contains":"ultimative","response":"tests/fixtures/ux/search_ultimative_vegane_lasagne.json","status":200,"content_type":"application/json"},
+ {"method":"GET","path":"/v2/recipes","query_contains":"spinat","response":"tests/fixtures/ux/search_vegetarische_spinat_lasagne.json","status":200,"content_type":"application/json"},
+ {"method":"GET","path":"/v2/recipes","query_contains":"vegane","response":"tests/fixtures/ux/search_vegane_lasagne.json","status":200,"content_type":"application/json"},
+ {"method":"GET","path":"/v2/recipes","query_contains":"lasagne","response":"tests/fixtures/ux/search_lasagne.json","status":200,"content_type":"application/json"},
+ {"method":"GET","path":"/v2/recipes/2812481433250378","response":"tests/fixtures/ux/recipe_2812481433250378.json","status":200,"content_type":"application/json"},
+ {"method":"GET","path":"/v2/recipes/2114131340630587","response":"tests/fixtures/ux/recipe_2114131340630587.json","status":200,"content_type":"application/json"}]
 ```
 
-## Formularschritte der schreibenden Aktion
+## Schreibende Aktion
 
-Die Liste enthält ALLE Requests in Reihenfolge, bis die Buchung endgültig bestätigt ist. `sends` nennt Feldnamen, die im Body vorkommen müssen; ein `*` am Ende erlaubt Präfix-Treffer. `before_confirm: true` ist nur für Schritte erlaubt, die vor der `[j/N]`-Frage laufen und nichts verbindlich auslösen, zum Beispiel das Öffnen des Formulars. `live: erkundet` heißt lesend auf der echten Seite gesehen, `live: synthetisch` heißt nachgebaut und als solches markiert.
-
-```ux-formsteps
-[{"id":"formular_oeffnen","method":"POST","path":"/buchen/32304","sends":["kurs_id"],"response":"tests/fixtures/ux/buchen_formular.html","before_confirm":true,"live":"erkundet"},
- {"id":"teilnehmerdaten","method":"POST","path":"/buchen/32304","sends":["vorname","nachname","email","statusgruppe"],"response":"tests/fixtures/ux/buchen_uebersicht.html","live":"synthetisch"},
- {"id":"verbindlich","method":"POST","path":"/buchen/32304","sends":["bestaetigungstoken"],"response":"tests/fixtures/ux/buchen_bestaetigt.html","final":true,"live":"synthetisch"}]
-```
-
-Der letzte Schritt trägt `"final": true`. Fehlt ein Schritt oder endet die Aktion nach dem ersten Request, meldet `ux_check.py` UX08 und `ux_session.py` bricht den Lauf ab. Beide Gates müssen grün sein, bevor der Build als fertig gilt.
+Es gibt keine. `chefkoch` ist read-only, benötigt keinen Login und sendet
+keine POST-/PUT-/DELETE-Requests. Damit entfallen `ux-formsteps` und
+`credential_env`.
