@@ -105,7 +105,7 @@ def test_rezept_per_name_auswahl_und_portionen(env):
             ["rezept", "vegane lasagne", "--portionen", "4"],
             env,
             server,
-            inputs=[(r"Auswahl \[1-5\]:", "2")],
+            inputs=[("Auswahl [1-5]:", "2")],
         )
 
     assert code == 0, output
@@ -130,7 +130,7 @@ def test_einkaufsliste_per_namen_summiert_zutaten(env):
             ],
             env,
             server,
-            inputs=[(r"Auswahl \[1-5\]:", "1")],
+            inputs=[("Auswahl [1-5]:", "1")],
         )
 
     assert code == 0, output
