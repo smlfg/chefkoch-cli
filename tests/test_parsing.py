@@ -73,3 +73,16 @@ def test_fehlende_trefferliste_ist_parse_fehler():
 def test_treffer_ohne_rezept_ist_parse_fehler():
     with pytest.raises(ParseError):
         normalize_search_result({"score": 1})
+
+
+def test_rezept_ohne_menge_liefert_amount_none():
+    recipe = normalize_recipe(load("recipe_2812481433250378.json"), requested_servings=4)
+
+    ingredients = {
+        item["name"]: item
+        for group in recipe["ingredientGroups"]
+        for item in group["ingredients"]
+    }
+    assert ingredients["Pfeffer, schwarzer"]["amount"] is None
+    assert ingredients["Muskat"]["amount"] is None
+    assert ingredients["Naturtofu"]["amount"] == pytest.approx(125.0)

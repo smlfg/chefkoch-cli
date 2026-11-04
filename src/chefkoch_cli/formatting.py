@@ -66,15 +66,22 @@ def format_search_line(index: int, item: dict[str, Any]) -> str:
     return f"{index}) {title} (ID {recipe_id}) · {rating}★ · {preparation} · {difficulty}"
 
 
+def _amount_text(value: object) -> str:
+    if value is None:
+        return ""
+    text = format_amount(value)
+    return "" if text == "0" else text
+
+
+def _ingredient_line(name: str, unit: str, amount: object) -> str:
+    parts = (_amount_text(amount), unit, name)
+    return " ".join(part for part in parts if part).strip()
+
+
 def format_ingredient(ingredient: dict[str, Any]) -> str:
     name = str(ingredient.get("name") or "").strip()
     unit = str(ingredient.get("unit") or "").strip()
-    amount = format_amount(ingredient.get("amount"))
-    if amount == "0" and not unit:
-        return name
-    if unit:
-        return f"{amount} {unit} {name}".strip()
-    return f"{amount} {name}".strip()
+    return _ingredient_line(name, unit, ingredient.get("amount"))
 
 
 def format_recipe_text(recipe: dict[str, Any]) -> str:
@@ -114,10 +121,7 @@ def format_recipe_text(recipe: dict[str, Any]) -> str:
 def format_shopping_line(item: dict[str, Any]) -> str:
     name = str(item.get("name") or "").strip()
     unit = str(item.get("unit") or "").strip()
-    amount = format_amount(item.get("amount"))
-    if unit:
-        return f"{amount} {unit} {name}".strip()
-    return f"{amount} {name}".strip()
+    return _ingredient_line(name, unit, item.get("amount"))
 
 
 def format_shopping_text(

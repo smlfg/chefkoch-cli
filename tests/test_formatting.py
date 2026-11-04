@@ -84,3 +84,33 @@ def test_rezepttext_enthaelt_portionen_und_zutaten():
     assert "Portionen: 4 (Basis: 8)" in text
     assert "125 g Naturtofu" in text
     assert "125 g Räuchertofu" in text
+
+
+def test_zutaten_ohne_menge_zeigen_keine_null():
+    assert (
+        format_ingredient({"name": "Basilikum", "amount": None, "unit": ""})
+        == "Basilikum"
+    )
+    assert (
+        format_ingredient({"name": "Butter", "amount": 0, "unit": "etwas"})
+        == "etwas Butter"
+    )
+    assert (
+        format_ingredient({"name": "Pfeffer", "amount": None, "unit": "n. B."})
+        == "n. B. Pfeffer"
+    )
+
+
+def test_einkaufslisten_zeile_ohne_menge_zeigt_keine_null():
+    assert (
+        format_shopping_line({"name": "Basilikum", "amount": None, "unit": ""})
+        == "Basilikum"
+    )
+    assert (
+        format_shopping_line({"name": "Butter", "amount": 0, "unit": "etwas"})
+        == "etwas Butter"
+    )
+    assert (
+        format_shopping_line({"name": "Pfeffer", "amount": None, "unit": "n. B."})
+        == "n. B. Pfeffer"
+    )

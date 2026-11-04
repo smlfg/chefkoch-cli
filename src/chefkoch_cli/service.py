@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import re
 import unicodedata
 from typing import Any
@@ -274,6 +275,18 @@ def _normalize_key(value: object) -> str:
     return text.casefold()
 
 
+def _optional_amount(value: object) -> float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(number) or number == 0:
+        return None
+    return number
+
+
 def build_shopping_list(
     recipes: list[dict[str, Any]], portions: int | None
 ) -> dict[str, Any]:
@@ -298,11 +311,15 @@ def build_shopping_list(
                     entry = {
                         "name": name,
                         "unit": unit,
-                        "amount": 0.0,
+                        "amount": None,
                         "recipeIds": [],
                     }
                     aggregates[key] = entry
-                entry["amount"] += float(ingredient.get("amount") or 0.0)
+                amount = _optional_amount(ingredient.get("amount"))
+                if amount is not None:
+                    if entry["amount"] is None:
+                        entry["amount"] = 0.0
+                    entry["amount"] += amount
                 if recipe_id and recipe_id not in entry["recipeIds"]:
                     entry["recipeIds"].append(recipe_id)
 
@@ -314,7 +331,8 @@ def build_shopping_list(
         ),
     )
     for entry in items:
-        entry["amount"] = round(entry["amount"], 2)
+        if entry["amount"] is not None:
+            entry["amount"] = round(entry["amount"], 2)
     return {"recipes": recipe_rows, "items": items}
 
 

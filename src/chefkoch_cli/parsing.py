@@ -35,6 +35,18 @@ def _integer(value: object, default: int = 0) -> int:
     return int(number)
 
 
+def _optional_amount(value: object) -> float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(number) or number == 0:
+        return None
+    return number
+
+
 def _rating_parts(value: object) -> tuple[float | None, int]:
     if isinstance(value, dict):
         rating = _number(value.get("rating"), 0.0)
@@ -143,11 +155,14 @@ def normalize_recipe(
                 for ingredient in raw_ingredients:
                     if not isinstance(ingredient, dict):
                         continue
-                    amount = _number(ingredient.get("amount"), 0.0) * scale
+                    raw_amount = _optional_amount(ingredient.get("amount"))
+                    amount = (
+                        None if raw_amount is None else round(raw_amount * scale, 4)
+                    )
                     ingredients.append(
                         {
                             "name": _text(ingredient.get("name")),
-                            "amount": round(amount, 4),
+                            "amount": amount,
                             "unit": _text(ingredient.get("unit")),
                         }
                     )

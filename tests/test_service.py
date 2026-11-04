@@ -162,3 +162,17 @@ def test_einkaufsliste_trennt_verschiedene_einheiten():
 
     assert len(data["items"]) == 2
     assert [item["unit"] for item in data["items"]] == ["EL", "g"]
+
+
+def test_einkaufsliste_ohne_menge_liefert_amount_none():
+    from chefkoch_cli.parsing import normalize_recipe
+
+    recipe = normalize_recipe(load("recipe_2812481433250378.json"), 4)
+
+    data = service.build_shopping_list([recipe], 4)
+    items = {item["name"]: item for item in data["items"]}
+
+    assert items["Pfeffer, schwarzer"]["amount"] is None
+    assert items["Muskat"]["amount"] is None
+    assert items["Naturtofu"]["amount"] == pytest.approx(125.0)
+    assert items["Basilikum"]["amount"] == pytest.approx(1.0)
